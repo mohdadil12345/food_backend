@@ -73,13 +73,13 @@ postRouter.get("/:id",async (req, res) => {
 // delete
 
 
-postRouter.delete("/delete/:movieID", async (req, res) => {
-    const { movieID } = req.params
+postRouter.delete("/delete/:prodID", async (req, res) => {
+    const { prodID } = req.params
 
     try {
 
-        await PostModel.findByIdAndDelete({ _id: movieID })
-        res.status(200).send({ "msg": `The product with ID:${movieID} has been deleted` })
+        await PostModel.findByIdAndDelete({ _id: prodID })
+        res.status(200).send({ "msg": `The product with ID:${prodID} has been deleted` })
 
 
 
